@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "商标异议",
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-toast": "/miniprogram_npm/@vant/weapp/toast/index",
+    "intention-marquee": "/components/intention-marquee/index"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "appid": "19193750",
+    "host": "baiduboxapp",
+    "preview": {
+        "packageId": 830109
+    },
+    "projectname": "外推网",
+    "publish": {
+        "version": "1.0.1.0"
+    },
+    "setting": {
+        "urlCheck": true
+    },
+    "swan": {
+        "baiduboxapp": {
+            "extensionJsVersion": "1.12.4",
+            "swanJsVersion": "3.170.14"
+        }
+    }
+}

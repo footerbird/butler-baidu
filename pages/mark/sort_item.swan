@@ -1,0 +1,56 @@
+<view style="height: 100%;">
+
+    <view class="container">
+
+        <block s-if=" page_loading ">
+        <view class="loading-box ta-c">
+            <van-loading size="24px" vertical>加载中...</van-loading>
+        </view>
+        </block>
+        <block s-else>
+        <view class="sort-detail">
+            <view class="info-table">
+                <view class="table-left">
+                    <view class="item-box">
+                        <block s-for="group, index in  category.groups " s-key="category_id">
+                        <view class="wx-a item {{ group_code === group.category_code ? 'cur' : '' }}" data-code="{{ group.category_code }}" bindtap="toggleLeftMenu">
+                            【{{ group.category_code }}】
+                        </view>
+                        </block>
+                    </view>
+                </view>
+                <block s-if=" items.length === 0 ">
+                <view class="loading-box ta-c">
+                    <van-loading size="24px" vertical>加载中...</van-loading>
+                </view>
+                </block>
+                <block s-else>
+                <view class="table-right">
+                    <view class="item-box">
+                        <block s-for="group, index in  category.groups " s-key="category_id">
+                        <view class="item-title" s-if=" group_code === group.category_code ">
+                        {{ group.category_name }}
+                        </view>
+                        </block>
+                        <block s-for="item, index in  items " s-key="category_id">
+                        <view class="wx-a item" s-if=" item.category_code === '' ">
+                            <view class="item-wrap">
+                                <text>{{ item.category_code }}\t\t{{ item.category_name }}</text>
+                            </view>
+                        </view>
+                        <view class="wx-a item" s-else>
+                            <view class="item-wrap">
+                                <text>{{ item.category_name }}</text>
+                            </view>
+                        </view>
+                        </block>
+                    </view>
+                </view>
+                </block>
+            </view>
+        </view>
+        </block>
+
+    </view>
+
+</view>

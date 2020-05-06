@@ -1,0 +1,418 @@
+<view style="height: 100%;">
+
+    <view class="header"></view>
+    <view class="container">
+        
+        <swiper class="entry-banner" indicator-dots="true" indicator-color="rgba(255,255,255,.2)" indicator-active-color="rgba(255,255,255,1)" autoplay="true" interval="2000" duration="500" circular="true">
+            <swiper-item>
+                <navigator class="swiper-slide" url="/pages/intention/domain">
+                    <image src="/assets/images/ad/ad-domain-entrust.png" />
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator open-type="switchTab" class="swiper-slide" url="/pages/domain/list">
+                    <image src="/assets/images/ad/ad-domain-market.png" />
+                </navigator>
+            </swiper-item>
+        </swiper>
+        
+        <!--专题版块-->
+        <view class="entry-subject">
+             <view class="entry-subject-grids">
+                <navigator class="item" url="/pages/intention/domain">
+                    <view class="wx-span" style="padding-right: 15px;">
+                        <view class="wx-i user"></view>域名经纪
+                    </view>
+                </navigator>
+                <navigator class="item mid" url="/pages/intention/mark">
+                    <view class="wx-span">
+                        <view class="wx-i fire"></view>商标注册<view class="wx-i hot"></view>
+                    </view>
+                </navigator>
+                <navigator class="item" url="/pages/brand/list">
+                    <view class="wx-span" style="padding-left: 15px;">
+                        <view class="wx-i crown"></view>品牌大全
+                    </view>
+                </navigator>
+            </view>
+            <view class="entry-subject-topic">
+                <navigator class="company" url="/pages/company/list">
+                    <view class="title">企业名录</view>
+                    <view class="wx-h2">一站式品牌管家</view>
+                    <view class="wx-h3">企业新时代名片</view>
+                </navigator>
+                <view class="company-flex">
+                    <navigator open-type="switchTab" class="domain" url="/pages/domain/list">
+                        <view class="title">域名市场</view>
+                        <view class="wx-h2">让网站更好记</view>
+                        <view class="wx-h3">品牌大数据，全网监控</view>
+                    </navigator>
+                    <navigator open-type="switchTab" class="mark" url="/pages/mark/list">
+                        <view class="title">商标市场</view>
+                        <view class="wx-h2">好产品的出路</view>
+                        <view class="wx-h3">一站式商标解决方案</view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        
+        <!--全周期品牌服务 -->
+        <view class="home-circle">
+            <view class="wx-h3 title">全周期的品牌服务</view>
+            <view class="wx-ul circle-tab">
+                <view class="wx-li {{ home_circle === 1 ? 'cur' : '' }}">
+                    <view class="wx-a" data-circle="1" bindtap="switchCircle">
+                        <view class="wx-em">初创期</view>
+                    </view>
+                </view>
+                <view class="wx-li {{ home_circle === 2 ? 'cur' : '' }}">
+                    <view class="wx-a" data-circle="2" bindtap="switchCircle">
+                        <view class="wx-em">发展期</view>
+                    </view>
+                </view>
+                <view class="wx-li {{ home_circle === 3 ? 'cur' : '' }}">
+                    <view class="wx-a" data-circle="3" bindtap="switchCircle">
+                        <view class="wx-em">成长期</view>
+                    </view>
+                </view>
+            </view>
+            <view class="circle-content">
+                <view class="circle-item" hidden="{{ home_circle !== 1 }}">
+                    <view class="circle-service">
+                        <navigator class="service-block" url="/pages/intention/gszc">
+                            <view class="service-block-title">
+                                <view class="wx-em">公司注册</view>
+                                <view class="wx-span"><view class="wx-i">快速拿证</view></view>
+                            </view>
+                            <view class="service-block-text">我们提供免费的公司起名和公司核名服务，
+                            最快三天拿到营业执照，顾问全程指导，省心省力，创业无门槛，轻松当老板。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/csjz">
+                            <view class="service-block-title">
+                                <view class="wx-em">财税记账</view>
+                                <view class="wx-span"><view class="wx-i">资深会计</view></view>
+                            </view>
+                            <view class="service-block-text">专业高效的一体化财税服务，以标准化、精细化、
+                            规模化、建立市场体系；在改善用户体验方面不断革新优化，提升客户的服务需求。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/mark">
+                            <view class="service-block-title">
+                                <view class="wx-em">商标注册<view class="wx-i hot"></view></view>
+                                <view class="wx-span"><view class="wx-i">专家辅助申请</view></view>
+                            </view>
+                            <view class="service-block-text">商标注册存在驳回失败风险，外推网利用大数据分析
+                            和先进搜索技术快速甄别类似商标注册信息及状态，帮助提高通过率。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/domain">
+                            <view class="service-block-title">
+                                <view class="wx-em">域名注册</view>
+                                <view class="wx-span"><view class="wx-i">全球资源</view></view>
+                            </view>
+                            <view class="service-block-text">提前抢占互联网入口，有丰富的域名种类供您选择。
+                            提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。</view>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="circle-item" hidden="{{ home_circle !== 2 }}">
+                    <view class="circle-service">
+                        <navigator class="service-block" url="/pages/intention/domain">
+                            <view class="service-block-title">
+                                <view class="wx-em">主流品牌域名获取</view>
+                                <view class="wx-span"><view class="wx-i">网络房地产</view></view>
+                            </view>
+                            <view class="service-block-text">评估、分析、谈判、收购，品牌域名全程策划。域名是
+                            企业重要的无形资产，有利于树立良好的品牌形象。使推广事半功倍，省下巨额广告费用。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/mark">
+                            <view class="service-block-title">
+                                <view class="wx-em">相关品类商标获取</view>
+                                <view class="wx-span"><view class="wx-i">防止商标侵权</view></view>
+                            </view>
+                            <view class="service-block-text">商标急用等不了？选好了商标名字却被驳回？外推网
+                            帮您购买心仪的商标，防止因商标使用不当构成侵权。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/gwjz">
+                            <view class="service-block-title">
+                                <view class="wx-em">官网建站与小程序开发</view>
+                                <view class="wx-span"><view class="wx-i">重要的获客渠道</view></view>
+                            </view>
+                            <view class="service-block-text">官网和小程序在线上的持续曝光，极大降低了企业的
+                            获客成本，面向全球客户，可以全面、详细地介绍公司产品及公司服务。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/visj">
+                            <view class="service-block-title">
+                                <view class="wx-em">企业VI形象视觉设计</view>
+                                <view class="wx-span"><view class="wx-i">企业文化</view></view>
+                            </view>
+                            <view class="service-block-text">VI设计有助于企业带来视觉的宣传作用，提升品牌
+                            辨识度，同时还能提高消费者对品牌的忠诚度，加强企业文化建设。</view>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="circle-item" hidden="{{ home_circle !== 3 }}">
+                    <view class="circle-service">
+                        <navigator class="service-block" url="/pages/intention/ppzx">
+                            <view class="service-block-title">
+                                <view class="wx-em">品牌发展咨询</view>
+                                <view class="wx-span"><view class="wx-i">未雨绸缪</view></view>
+                            </view>
+                            <view class="service-block-text">帮助确立品牌定位、提前做好品牌战略规划和品牌
+                            营销策划等，帮助企业建立强有力的品牌从而在市场上取得竞争优势。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/pptg">
+                            <view class="service-block-title">
+                                <view class="wx-em">品牌营销推广</view>
+                                <view class="wx-span"><view class="wx-i">产品落地</view></view>
+                            </view>
+                            <view class="service-block-text">自媒体推广、短视频推广、搜索引擎推广，通过对
+                            品牌产品的曝光，可以挖掘潜在客户，让客户主动找上门，掌握主动权。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/ppwq">
+                            <view class="service-block-title">
+                                <view class="wx-em">品牌确权维权</view>
+                                <view class="wx-span"><view class="wx-i">打击竞争对手</view></view>
+                            </view>
+                            <view class="service-block-text">品牌意识的确定以及相关品牌的保护，让企业可以
+                            在面对品牌危机的时候临危不乱，有效使用法律武器捍卫自己的权利。</view>
+                        </navigator>
+                        <navigator class="service-block" url="/pages/intention/ppyy">
+                            <view class="service-block-title">
+                                <view class="wx-em">品牌代运营</view>
+                                <view class="wx-span"><view class="wx-i">优化企业资源</view></view>
+                            </view>
+                            <view class="service-block-text">代运营可以弥补企业人手短缺以及经验不足的缺点，
+                            有效降低企业运营成本，减小品牌运营风险。</view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <!-- 商标分类入口 -->
+        <view class="home-marksort">
+            <view class="text"><text>截至2020年，商标国际分类共包括45类，\n共包含一万多个商品和服务项目</text></view>
+            <navigator url="/pages/mark/sort" class="btn">商标分类</navigator>
+        </view>
+        
+        <!--商标解决方案 -->
+        <view class="home-solution">
+            <view class="wx-h3 title">商标解决方案</view>
+            <view class="solution-content">
+                <view class="solution-item">
+                    <view class="solution-service">
+                        <view class="service-block {{ home_solution === 1 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="1" bindtap="switchSolution">
+                                <text class="wx-em">商标购买</text>
+                            </view>
+                            <view class="service-block-text">适用于急用商标（商标注册时间长）等不及或者为了企业长远发展
+                            需要全面保护品牌的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>5000起
+                                <navigator class="wx-a" url="/pages/intention/mark">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 2 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="2" bindtap="switchSolution">
+                                <text class="wx-em">商标注册</text>
+                            </view>
+                            <view class="service-block-text">顾问1对1服务，通过大数据比对专业查询降低近似风险，提高注册
+                            成功率，托管式服务省心省力</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>600
+                                <navigator class="wx-a" url="/pages/intention/mark">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 3 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="3" bindtap="switchSolution">
+                                <text class="wx-em">商标设计</text>
+                            </view>
+                            <view class="service-block-text">适用于需要通过注册图形或独一无二的文字商标来加强品牌辨识度，
+                            从而扩大品牌影响力的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>1000
+                                <navigator class="wx-a" url="/pages/intention/sbsj">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 4 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="4" bindtap="switchSolution">
+                                <text class="wx-em">商标驳回复审</text>
+                            </view>
+                            <view class="service-block-text">适用于商标实质审查未通过，（在规定时效内）希望向商标局提交
+                            复审申请，再次争取的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>3500
+                                <navigator class="wx-a" url="/pages/intention/bhfs">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 5 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="5" bindtap="switchSolution">
+                                <text class="wx-em">国际商标</text>
+                            </view>
+                            <view class="service-block-text">这里指的注册马德里国际商标。由于商标的地域性，适用于拓展海外
+                            市场增强国际竞争力的用户</view>
+                            <view class="service-block-price">议价
+                                <navigator class="wx-a" url="/pages/intention/gjsb">了解更多</navigator>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="solution-item">
+                    <view class="solution-service">
+                        <view class="service-block {{ home_solution === 6 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="6" bindtap="switchSolution">
+                                <text class="wx-em">商标变更</text>
+                            </view>
+                            <view class="service-block-text">适用于需要变更自有商标的注册人名义、登记地址等注册事项
+                            （代理人、文件接收人）的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>600
+                                <navigator class="wx-a" url="/pages/intention/sbbg">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 7 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="7" bindtap="switchSolution">
+                                <text class="wx-em">商标转让</text>
+                            </view>
+                            <view class="service-block-text">适用于需要将自有商标转让（商标权属发生改变）的用户，需依照
+                            商标法规定向商标局提交转让申请</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>1200
+                                <navigator class="wx-a" url="/pages/intention/sbzr">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 8 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="8" bindtap="switchSolution">
+                                <text class="wx-em">商标续展</text>
+                            </view>
+                            <view class="service-block-text">适用于注册商标有效期（十年）满前（在规定时效内）希望向商标局
+                            提交申请，以保有原商标的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>1000
+                                <navigator class="wx-a" url="/pages/intention/sbxz">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 9 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="9" bindtap="switchSolution">
+                                <text class="wx-em">商标许可备案</text>
+                            </view>
+                            <view class="service-block-text">适用于需要将自有商标授权许可他人使用的用户，需向商标局提交
+                            许可申请并报送备案材料</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>600
+                                <navigator class="wx-a" url="/pages/intention/xkba">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 10 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="10" bindtap="switchSolution">
+                                <text class="wx-em">补注册证</text>
+                            </view>
+                            <view class="service-block-text">适用于《商标注册证》遗失或者破损，想要申请补发证书的
+                            商标注册人</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>1000
+                                <navigator class="wx-a" url="/pages/intention/bzcz">了解更多</navigator>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="solution-item">
+                    <view class="solution-service">
+                        <view class="service-block {{ home_solution === 11 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="11" bindtap="switchSolution">
+                                <text class="wx-em">商标异议</text>
+                            </view>
+                            <view class="service-block-text">适用于被他人申请的商标侵权，希望在其商标公示期提出异议申请，
+                            以阻止他人注册的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>3500
+                                <navigator class="wx-a" url="/pages/intention/sbyy">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 12 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="12" bindtap="switchSolution">
+                                <text class="wx-em">商标撤销</text>
+                            </view>
+                            <view class="service-block-text">适用于因商标资源被恶意占用等原因，需要撤销他人商标（已注册
+                            满三年且长期不使用）的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>2500
+                                <navigator class="wx-a" url="/pages/intention/sbcx">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 13 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="13" bindtap="switchSolution">
+                                <text class="wx-em">商标无效宣告</text>
+                            </view>
+                            <view class="service-block-text">适用于他人已注册成功的商标侵犯自身在先权或违反《商标法》，
+                            希望宣告该商标无效的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>3500
+                                <navigator class="wx-a" url="/pages/intention/wxxg">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 14 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="14" bindtap="switchSolution">
+                                <text class="wx-em">异议答辩</text>
+                            </view>
+                            <view class="service-block-text">适用于商标注册公示期被他人提出异议，（在规定时效内）希望
+                            提交答辩申请，以挽回注册的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>3500
+                                <navigator class="wx-a" url="/pages/intention/yydb">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 15 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="15" bindtap="switchSolution">
+                                <text class="wx-em">撤销答辩</text>
+                            </view>
+                            <view class="service-block-text">适用于商标被他人申请撤销，（在规定时效内）向商标局提交
+                            答辩申请，以保留商标的使用权的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>2500
+                                <navigator class="wx-a" url="/pages/intention/cxdb">了解更多</navigator>
+                            </view>
+                        </view>
+                        <view class="service-block {{ home_solution === 16 ? 'cur' : '' }}">
+                            <view class="service-block-title" data-solution="16" bindtap="switchSolution">
+                                <text class="wx-em">无效宣告答辩</text>
+                            </view>
+                            <view class="service-block-text">适用于注册商标被宣告无效后，（在规定时效内）向商标局
+                            提交答辩，以维护自身商标权益的用户</view>
+                            <view class="service-block-price"><text class="wx-i">¥</text>3500
+                                <navigator class="wx-a" url="/pages/intention/wxdb">了解更多</navigator>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!--精准的客户定位-->
+        <view class="home-topic home-topic-target">
+            <view class="intro-box">
+                <view class="wx-h2">精准的定向能力</view>
+                <view class="wx-p">我们根据用户的地理位置、使用设备、活跃时间以及用户的操作习惯为您描绘出精确的用户画像，帮助您选择合适的品牌营销群体</view>
+            </view>
+            <view class="image-box">
+                <image mode="widthFix" src="/assets/images/home-topic-target.png" />
+            </view>
+        </view>
+        
+        <!--多样的营销方式-->
+        <view class="home-topic home-topic-types">
+            <view class="intro-box">
+                <view class="wx-h2 col-white">多样的营销方式</view>
+                <view class="wx-p col-white">我们提供首页开屏广告、翻页刷屏广告、品牌资讯报道、品牌活动发现频道以及品牌助力拼团等多种营销方式，
+                帮助企业将信息推送给真正有兴趣的用户</view>
+            </view>
+            <view class="image-box">
+                <image mode="widthFix" src="/assets/images/home-topic-types.png" />
+            </view>
+        </view>
+
+        <!--专业的品牌管理-->
+        <view class="home-topic home-topic-manage">
+            <view class="intro-box">
+                <view class="wx-h2">专业的品牌管理</view>
+                <view class="wx-p">我们拥有来自域名、商标、知识产权等行业的专业品牌保护团队，
+                可以解决在品牌建设中会遇到的各种各样的问题，从而帮助企业树立良好的企业形象、打造品牌优势、发展品牌战略。</view>
+            </view>
+            <view class="image-box">
+                <image mode="widthFix" src="/assets/images/home-topic-manage.png" />
+            </view>
+        </view>
+
+        <view class="home-copyright">
+            <view class="wx-p">Copyright © 2020 外推网 All Rights Reserved.</view>
+            <view class="wx-p">浙ICP备19041362号-1</view>
+        </view>
+
+    </view>
+
+</view>

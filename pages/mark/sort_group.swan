@@ -1,0 +1,57 @@
+<import-sjs src="../filter.sjs" module="filter" />
+<view style="height: 100%;">
+
+    <view class="container">
+
+        <block s-if=" page_loading ">
+        <view class="loading-box ta-c">
+            <van-loading size="24px" vertical>加载中...</van-loading>
+        </view>
+        </block>
+        <block s-else>
+        <view class="sort-detail">
+            <view class="info-table">
+                <view class="table-left">
+                    <view class="item-box">
+                        <block s-for="value, index in  mark_category " s-key="category_id">
+                        <view class="wx-a item {{ category.category_code === value.category_code ? 'cur' : '' }}" data-code="{{ value.category_code }}" bindtap="toggleLeftMenu">
+                            <text>第{{ filter.format_marksort_cnchar(value.category_id) }}类\n{{ value.category_name }}</text>
+                        </view>
+                        </block>
+                    </view>
+                </view>
+                <block s-if=" category.groups.length === 0 ">
+                <view class="loading-box ta-c">
+                    <van-loading size="24px" vertical>加载中...</van-loading>
+                </view>
+                </block>
+                <block s-else>
+                <view class="table-right">
+                    <view class="summary-box">
+                        <view class="summary-title">
+                              <text>第{{ filter.format_marksort_cnchar(category.category_id) }}类\t\t{{ category.category_name }}</text>
+                        </view>
+                        <view class="summary">{{ category.category_use }}</view>
+                    </view>
+                    <view class="item-box mt15">
+                        <view class="item-title">群组信息</view>
+                        <block s-for="group, index in  category.groups " s-key="category_id">
+                        <navigator class="wx-a item item-group" url="/pages/mark/sort_item?code={{ group.category_code }}">
+                            <view class="item-wrap">【{{ group.category_code }}】
+                            {{ group.category_name }}</view>
+                        </navigator>
+                        </block>
+                    </view>
+                    <view class="summary-box mt15">
+                        <view class="summary-title">【注释】</view>
+                        <view class="summary">{{ category.description }}</view>
+                    </view>
+                </view>
+                </block>
+            </view>
+        </view>
+        </block>
+
+    </view>
+
+</view>
