@@ -59,7 +59,7 @@
                 </view>
                 <view class="ta-c pt20 pb20">
                     <block s-if=" mark.is_onsale == 'sale' ">
-                    <view class="pub-btn-blue">在线咨询</view>
+                    <navigator class="pub-btn-blue" url="/pages/intention/mark?mark_name={{ mark.mark_name }}_{{ mark.mark_category }}类">在线咨询</navigator>
                     </block>
                 </view>
             </view>

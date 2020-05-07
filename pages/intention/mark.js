@@ -17,7 +17,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    const that = this;
+    that.setData({
+      intention_product: options.mark_name
+    });
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

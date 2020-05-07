@@ -38,7 +38,7 @@
                 <view class="wx-dl pb10"><view class="wx-dt">距到期</view><view class="wx-dd">{{ domain.expired_distance }}天</view></view>
                 <view class="ta-c pb50">
                     <block s-if=" domain.is_onsale == 'sale' ">
-                    <view class="pub-btn-blue">在线咨询</view>
+                    <navigator class="pub-btn-blue" url="/pages/intention/domain?domain_name={{ domain.domain_name }}">在线咨询</navigator>
                     </block>
                 </view>
             </view>
