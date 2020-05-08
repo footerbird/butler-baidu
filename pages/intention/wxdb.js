@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '无效宣告答辩 | 外推网品牌管家',
+      keywords: '无效宣告答辩,商标无效宣告答辩,商标维权',
+      description: '适用于注册商标被宣告无效后，（在规定时效内）向商标局提交答辩，以维护自身商标权益的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

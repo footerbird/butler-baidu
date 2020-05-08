@@ -32,7 +32,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '域名代理服务 | 外推网品牌管家',
+      keywords: '域名代理,域名注册,域名购买,域名经纪,域名中介',
+      description: '提前抢占互联网入口，有丰富的域名种类供您选择。提早注册品牌域名可以防止域名被恶意抢注，保护品牌资产安全。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '品牌营销推广 | 外推网品牌管家',
+      keywords: '品牌营销,品牌推广,自媒体营销,SEO推广',
+      description: '自媒体推广、短视频推广、搜索引擎推广，通过对品牌产品的曝光，可以挖掘潜在客户，让客户主动找上门，掌握主动权。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

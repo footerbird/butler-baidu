@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '品牌代运营 | 外推网品牌管家',
+      keywords: '品牌运营,品牌代运营,品牌管理',
+      description: '代运营可以弥补企业人手短缺以及经验不足的缺点，有效降低企业运营成本，减小品牌运营风险。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

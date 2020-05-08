@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '公司注册 | 外推网品牌管家',
+      keywords: '公司注册,公司起名,公司核名,公司注册地址',
+      description: '我们提供免费的公司起名和公司核名服务，最快三天拿到营业执照，顾问全程指导，省心省力，创业无门槛，轻松当老板。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

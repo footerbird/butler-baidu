@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标异议 | 外推网品牌管家',
+      keywords: '商标异议,异议他人商标,商标服务',
+      description: '适用于被他人申请的商标侵权，希望在其商标公示期提出异议申请，以阻止他人注册的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

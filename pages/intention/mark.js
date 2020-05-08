@@ -32,7 +32,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标代理服务 | 外推网品牌管家',
+      keywords: '商标代理,商标注册,商标购买,商标转让',
+      description: '商标注册存在驳回失败风险，外推网利用大数据分析和先进搜索技术快速甄别类似商标注册信息及状态，帮助提高通过率。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

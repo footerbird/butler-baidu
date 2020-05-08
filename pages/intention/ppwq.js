@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '品牌确权维权 | 外推网品牌管家',
+      keywords: '品牌确权,品牌维权,品牌保护,品牌危机',
+      description: '品牌意识的确定以及相关品牌的保护，让企业可以在面对品牌危机的时候临危不乱，有效使用法律武器捍卫自己的权利。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

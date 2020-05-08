@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '财税记账 | 外推网品牌管家',
+      keywords: '财税记账,代理记账,税务筹划,代理开票',
+      description: '专业高效的一体化财税服务，以标准化、精细化、规模化、建立市场体系；在改善用户体验方面不断革新优化，提升客户的服务需求。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

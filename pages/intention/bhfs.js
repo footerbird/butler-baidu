@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标驳回复审 | 外推网品牌管家',
+      keywords: '商标驳回复审,商标服务',
+      description: '适用于商标实质审查未通过，（在规定时效内）希望向商标局提交复审申请，再次争取的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

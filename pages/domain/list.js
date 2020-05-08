@@ -28,7 +28,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '域名市场 - 域名交易就是这么简单 | 外推网品牌管家',
+      keywords: '外推网,杭州外推网络,域名管理,域名托管,域名转让,域名委托注册,域名委托购买,域名一口价购买,域名解析,官网建站,网站备案',
+      description: '杭州外推网络科技有限公司是专业的域名服务提供商,提供包括域名管理、域名托管、域名转让、域名委托注册、域名委托购买、域名一口价购买等域名交易管理服务。域名托管在外推网上还可以额外享受官网建站、域名代解析、域名代备案等优质服务。上外推网，认准【waitui.com】',
+      image: 'https://m.waitui.com/htdocs/mobile/images/ad/ad-domain-market.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

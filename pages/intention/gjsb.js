@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '国际商标 | 外推网品牌管家',
+      keywords: '国际商标,马德里国际商标,马德里商标注册',
+      description: '这里指的注册马德里国际商标。由于商标的地域性，适用于拓展海外市场增强国际竞争力的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

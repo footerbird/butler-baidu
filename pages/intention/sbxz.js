@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标续展 | 外推网品牌管家',
+      keywords: '商标续展,商标续费,商标到期,商标服务',
+      description: '适用于注册商标有效期（十年）满前（在规定时效内）希望向商标局提交申请，以保有原商标的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

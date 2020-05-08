@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '企业VI形象视觉设计 | 外推网品牌管家',
+      keywords: 'VI设计,视觉设计,企业形象设计,logo设计',
+      description: 'VI设计有助于企业带来视觉的宣传作用，提升品牌辨识度，同时还能提高消费者对品牌的忠诚度，加强企业文化建设。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

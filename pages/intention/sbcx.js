@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标撤销 | 外推网品牌管家',
+      keywords: '商标撤销,商标撤三服务,撤销他人商标',
+      description: '适用于因商标资源被恶意占用等原因，需要撤销他人商标（已注册满三年且长期不使用）的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

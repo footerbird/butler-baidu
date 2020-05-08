@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标许可备案 | 外推网品牌管家',
+      keywords: '商标许可备案,商标授权,商标服务',
+      description: '适用于需要将自有商标授权许可他人使用的用户，需向商标局提交许可申请并报送备案材料',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

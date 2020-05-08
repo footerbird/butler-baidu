@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '补注册证 | 外推网品牌管家',
+      keywords: '补注册证,注册证遗失,注册证破损,商标服务',
+      description: '适用于《商标注册证》遗失或者破损，想要申请补发证书的商标注册人',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

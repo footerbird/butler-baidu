@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标转让 | 外推网品牌管家',
+      keywords: '商标转让,商标交易,商标买卖,商标权变更',
+      description: '适用于需要将自有商标转让（商标权属发生改变）的用户，需依照商标法规定向商标局提交转让申请',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

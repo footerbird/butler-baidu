@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '品牌发展咨询 | 外推网品牌管家',
+      keywords: '品牌发展咨询,品牌规划,品牌定位,品牌战略',
+      description: '帮助确立品牌定位、提前做好品牌战略规划和品牌营销策划等，帮助企业建立强有力的品牌从而在市场上取得竞争优势。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

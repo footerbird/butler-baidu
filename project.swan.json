@@ -2,11 +2,11 @@
     "appid": "19193750",
     "host": "baiduboxapp",
     "preview": {
-        "packageId": 830109
+        "packageId": 834364
     },
     "projectname": "外推网",
     "publish": {
-        "version": "1.0.1.0"
+        "version": "1.0.3.0"
     },
     "setting": {
         "urlCheck": true

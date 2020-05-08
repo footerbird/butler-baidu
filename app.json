@@ -57,19 +57,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"/assets/images/tabbar/home.png",
+        "selectedIconPath":"/assets/images/tabbar/home-cur.png"
       },
       {
         "pagePath": "pages/domain/list",
-        "text": "域名"
+        "text": "域名",
+        "iconPath":"/assets/images/tabbar/domain.png",
+        "selectedIconPath":"/assets/images/tabbar/domain-cur.png"
       },
       {
         "pagePath": "pages/mark/list",
-        "text": "商标"
+        "text": "商标",
+        "iconPath":"/assets/images/tabbar/mark.png",
+        "selectedIconPath":"/assets/images/tabbar/mark-cur.png"
       },
       {
         "pagePath": "pages/my/console",
-        "text": "我的"
+        "text": "我的",
+        "iconPath":"/assets/images/tabbar/user.png",
+        "selectedIconPath":"/assets/images/tabbar/user-cur.png"
       }
     ]
   },

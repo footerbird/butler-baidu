@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '商标无效宣告 | 外推网品牌管家',
+      keywords: '商标无效宣告,无效他人商标,商标服务',
+      description: '适用于他人已注册成功的商标侵犯自身在先权或违反《商标法》，希望宣告该商标无效的用户',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

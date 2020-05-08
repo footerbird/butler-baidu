@@ -27,7 +27,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    swan.setPageInfo({
+      title: '官网建站与小程序开发 | 外推网品牌管家',
+      keywords: '官网建站,H5开发,小程序开发,APP开发',
+      description: '官网和小程序在线上的持续曝光，极大降低了企业的获客成本，面向全球客户，可以全面、详细地介绍公司产品及公司服务。',
+      image: 'https://m.waitui.com/htdocs/mobile/images/intention-banner.png'
+    });
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
